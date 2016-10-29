@@ -158,6 +158,28 @@ public class EmployeeTest {
         OptionalDouble optionalDouble = employeeList.stream().filter(c->c.getOffice().equals("New York")).mapToInt(c->c.getSalary()).average();
         System.out.println(optionalDouble);
 
+        System.out.println(">>>>>>Java8 Optional用法>>>>>>");
+        Optional<String> stringOptional = Optional.of("test");
+        System.out.println(stringOptional.get());
+
+        Optional<String> isOptional = Optional.ofNullable("hello");
+        System.out.println(isOptional.isPresent());
+        System.out.println(isOptional.get());
+        System.out.println(isOptional.orElse("0"));
+
+        System.out.println(">>>>>>>>>>>>");
+        //Optional<String> optionalVal = Optional.of(null);
+       // System.out.println(optionalVal);
+        Optional<String> optional = Optional.ofNullable("optional");
+        System.out.println(optional);
+        System.out.println(optional.isPresent());
+        System.out.println(optional.get());
+        System.out.println(optional.orElse("haha"));
+        System.out.println(">>>>>>>>>>>>");
+
+        Optional<Employee> employeeOptional_ = employeeList.stream().filter(c->c.getOffice().equals("New York")).findFirst();
+        System.out.println(employeeOptional_);
+
     }
 
 
