@@ -1,21 +1,29 @@
 package com.arch.test.lambda;
 
-import com.arch.demo.annotation.Check;
-import org.junit.Test;
-
-import java.lang.reflect.Method;
+import com.arch.demo.annotation.Test;
+import com.arch.demo.annotation.TestInfo;
 
 /**
  * Created by chenxiaobian on 16/11/1.
  */
+@TestInfo(priority = TestInfo.Priority.HIGH,createBy = "xiaobian",targs = "{sales}")
 public class AnnotationTest {
 
     @Test
-    public void testAnnotation() throws Exception{
-        Method method = Class.forName("CheckImpl").getDeclaredMethod("execute");
-        Check check = method.getAnnotation(Check.class);
+    void testAnnotation() throws Exception{
+        if(true){
+            throw  new RuntimeException(("This test always failed"));
+        }
+    }
 
-        System.out.println(check.param1());
-        System.out.println(check.param2());
+    @Test
+    void testB(){
+        if(false){
+            throw new RuntimeException("This test always passed");
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        new AnnotationTest().testAnnotation();
     }
 }
