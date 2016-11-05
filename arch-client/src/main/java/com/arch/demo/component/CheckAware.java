@@ -6,5 +6,5 @@ package com.arch.demo.component;
 public interface CheckAware {
 
     Boolean contentIsNotBlank(String content);
-    Boolean contentLimitCheck(String content,int limit);
+    Boolean contentLimitCheck(String content, int limit);
 }

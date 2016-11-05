@@ -1,4 +1,4 @@
-package com.arch.test.lambda;
+package com.arch.demo;
 
 import com.arch.demo.lambda.Employee;
 import com.google.common.collect.Maps;

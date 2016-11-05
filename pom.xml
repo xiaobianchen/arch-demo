@@ -6,7 +6,12 @@
 
     <groupId>com.arch.demo</groupId>
     <artifactId>arch-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>arch-client</module>
+        <module>arch-service</module>
+    </modules>
 
     <dependencies>
         <dependency>

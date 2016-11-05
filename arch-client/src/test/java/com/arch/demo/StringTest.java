@@ -1,4 +1,4 @@
-package com.arch.test.lambda;
+package com.arch.demo;
 
 import org.junit.Test;
 

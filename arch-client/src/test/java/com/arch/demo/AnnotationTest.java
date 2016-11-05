@@ -1,4 +1,4 @@
-package com.arch.test.lambda;
+package com.arch.demo;
 
 import com.arch.demo.annotation.Test;
 import com.arch.demo.annotation.TestInfo;
